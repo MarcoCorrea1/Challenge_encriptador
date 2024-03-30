@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width">
+
+        <title>Encriptador de texto</title>
+        <link rel="icon" href="imagenes/Logo1.png" type="image/png">
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <main>
+        <header>
+            <div>
+                <h1 class="imagenPrincipal"><img src="imagenes/Logo.png" class="logoImagen" alt="logo" width="180" height="65"></h1>
+            </div>
+        </header>
+        
+        <div class="contenedor">
+            <section class="escribirContenedor">
+                <textarea  id="textareaid"class="text-area" cols="10" rows="10" placeholder="Ingrese texto aquí"></textarea>
+                <div>
+                    <img src="imagenes/Vector.png"><h6 class="advertencia">Solo letras minúsculas y sin acento</h6>
+                </div>
+                <div class="boton">
+                    <button  onclick="botonEncriptar()" class="btnEncriptar">Encriptar</button>
+                    <button onclick="botonDesencriptar()" class="btnDesencriptar">Desencriptar</button>
+                </div>
+            </section>
+            <section class="mensajeContenedor" id="mensajeContenedorId">
+                <textarea readonly hidden id="mensajeTextareaId" cols="30" rows="10" class="mensajeTextarea"></textarea>
+                <div id="mensajeId" class="mensaje">
+                    <p>Ningun mensaje fue encontrado</p>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <button hidden onclick="copiarTexto()" id="boton-copiar" class="copiar">Copiar</button>
+            </section>
+        </div>
+        <footer>
+            <p class="footer-texto">Creado por: Marco C &#174; Copyright &#169;2024</p>
+            <div class="brands">
+                
+                <a href="https://github.com/MarcoCorrea1?tab=repositories" target="_blank" rel="noopener"><i class="github-perfil"></i>
+                    <img src="https://github.com/fluidicon.png" alt="GitHub Logo" width="30" height="30">
+                </a>
+
+            </div>
+            
+        </footer>
+    </main>
+    <script src="encriptador.js"></script>
+</body>
+</html>
